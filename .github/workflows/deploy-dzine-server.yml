@@ -18,7 +18,8 @@ jobs:
       with:
         host: ${{ secrets.SERVER_IP }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+        password: ${{ secrets.PASSWORD }}
+       # key: ${{ secrets.SSH_KEY }}
         port: 22
         envs: DEPLOYMENT_LOCATION
         script: |
