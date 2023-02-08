@@ -1,0 +1,26 @@
+name: Run Git pull on the server
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: dzinehub
+
+    steps:
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@v0.1.7
+      env:
+        DEPLOYMENT_LOCATION: ${{ secrets.DEPLOYMENT_LOCATION }}
+
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: 22
+        envs: DEPLOYMENT_LOCATION
+        script: |
+          cd $DEPLOYMENT_LOCATION
+          git pull
