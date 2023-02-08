@@ -2,7 +2,7 @@ name: Run Git pull on the dzine server
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "sample" ]
 
 jobs:
   build:
