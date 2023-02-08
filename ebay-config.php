@@ -4,5 +4,5 @@ $DevID = "{ DevId }";
 $AppID = "{ AppId }";
 $Cert  = "{ CertId }";
 
-echo "hellosss";
+echo "test";
 ?>
