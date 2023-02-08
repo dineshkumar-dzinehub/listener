@@ -1,4 +1,4 @@
-name: Run Git pull on the server
+name: Run Git pull on the dzine server
 
 on:
   push:
